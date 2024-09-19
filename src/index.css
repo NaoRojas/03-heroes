@@ -186,6 +186,9 @@ body {
   display: flex;
   flex-direction: row;
 }
+.flex-row.center {
+  justify-content: center;
+}
 
 .flex-col.start {
   align-items: flex-start;
@@ -223,10 +226,6 @@ h1 {
 
 .categories {
   margin: 32px 0 48px 0;
-}
-
-.hero-section {
-  /* width: 60%; */
 }
 
 .hero-card {

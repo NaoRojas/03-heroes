@@ -1,4 +1,4 @@
-import { AppRouter } from './router/AppRouter'
+import { AppRouter } from './routes/AppRouter'
 import { NavBar } from './ui/components/NavBar'
 export const HeroesApp = () => {
   return (
