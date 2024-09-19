@@ -264,3 +264,33 @@ h3 {
 .body-content {
   padding: 24px;
 }
+
+input {
+  /* width: 100%; */
+  border-radius: 8px;
+  border: 1px solid #d3d7df;
+  height: fit-content;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 12px 16px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}

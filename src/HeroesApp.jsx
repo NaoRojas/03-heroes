@@ -3,7 +3,6 @@ import { NavBar } from './ui/components/NavBar'
 export const HeroesApp = () => {
   return (
     <>
-      <NavBar />
       <AppRouter />
     </>
   )
