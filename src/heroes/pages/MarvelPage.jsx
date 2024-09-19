@@ -1,12 +1,9 @@
-import { useState } from 'react'
-
-import marvel from './assets/marvel.svg'
-import './App.css'
-
-function App() {
+import marvel from '../../assets/marvel.svg'
+import '../heroes.css'
+export const MarvelPage = () => {
   return (
-    <>
-      <div>
+    <div className="body-content">
+      <div className="flex-row center">
         <img src={marvel} className="logo" alt="React logo" />
       </div>
       <div className="flex-col start">
@@ -101,8 +98,6 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
-
-export default App

@@ -4,7 +4,7 @@
   --medium: 500;
   --light: 300;
 
-  --primary-red: #d02a4b;
+  --primary-red: #cb234b;
   --primary-black: #000000;
   --primary-dark: #343442;
   --primary-gray: #b6b6c6;
@@ -166,6 +166,7 @@ body {
   width: 95px;
   height: 35px;
   color: var(--primary-red);
+  margin-bottom: 42px;
 }
 
 .flex-col {
@@ -217,7 +218,7 @@ h1 {
 }
 
 .hero-section {
-  width: 60%;
+  /* width: 60%; */
 }
 
 .hero-card {
@@ -253,5 +254,6 @@ h3 {
   margin: 0;
 }
 
-.scroll-horizontal {
+.body-content {
+  padding: 24px;
 }
