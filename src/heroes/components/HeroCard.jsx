@@ -1,13 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 export const HeroCard = ({ hero, publisher }) => {
-  function imageName() {
-    const firstWord = hero.superhero.split(' ')[0].toLowerCase()
-    return publisher === 'DC Comics' ? 'dc-' + firstWord : 'marvel-' + firstWord
-  }
+  const navigate = useNavigate()
   return (
-    <div className="hero-card" key={hero.id}>
+    <div
+      className="hero-card"
+      key={hero.id}
+      onClick={() => {
+        navigate(`/hero/${hero.id}`)
+      }}
+    >
       <img
         className="hero-image"
-        src={`/src/images/heroes/${imageName()}.jpg`}
+        src={`/src/images/heroes/${hero.id}.jpg`}
         alt=""
       />
       <div className="flex-col start hero-card-body">
