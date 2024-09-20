@@ -1,5 +1,7 @@
 import dc from '../../assets/dc.png'
+import { HeroList } from '../components/HeroList'
 import '../heroes.css'
+import { getHeroesByPublisher } from '../helpers/getHeroesByPublisher'
 
 export const DCPage = () => {
   return (
@@ -59,51 +61,10 @@ export const DCPage = () => {
           />
         </div>
       </div>
-      <div className="flex-col hero-section">
-        <div className="flex-row baseline space-between">
-          <h2 className="section-title primary-red">Heroes</h2>
-          <h2 className="description primary-gray">See All</h2>
-        </div>
-        <div className="scroll-horizontal flex-row">
-          <div className="hero-card">
-            <img
-              className="hero-image"
-              src="/src/images/heroes/black.png"
-              alt=""
-            />
-            <div className="flex-col start hero-card-body">
-              <h3 className="card-subtitle primary-gray">T'Challa</h3>
-              <h3 className="card-title primary-white text-start">
-                Black Panther
-              </h3>
-            </div>
-          </div>
-          <div className="hero-card">
-            <img
-              className="hero-image"
-              src="/src/images/heroes/ironman.png"
-              alt=""
-            />
-            <div className="flex-col start hero-card-body">
-              <h3 className="card-subtitle primary-gray">
-                Anthony Edward Stark
-              </h3>
-              <h3 className="card-title primary-white text-start">Iron Man</h3>
-            </div>
-          </div>
-          <div className="hero-card">
-            <img
-              className="hero-image"
-              src="/src/images/heroes/spiderman.png"
-              alt=""
-            />
-            <div className="flex-col start hero-card-body">
-              <h3 className="card-subtitle primary-gray">Peter Parker</h3>
-              <h3 className="card-title primary-white text-start">Spiderman</h3>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroList
+        publisher="DC Comics"
+        heroList={getHeroesByPublisher('DC Comics')}
+      />
     </div>
   )
 }
