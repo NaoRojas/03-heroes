@@ -2,8 +2,15 @@ import dc from '../../assets/dc.png'
 import { HeroList } from '../components/HeroList'
 import '../heroes.css'
 import { getHeroesByPublisher } from '../helpers/getHeroesByPublisher'
-
+import { HeroFilters } from '../components/HeroFilters'
 export const DCPage = () => {
+  const heroType = {
+    hero: 'Hero',
+    villain: 'Villain',
+    antihero: 'Antihero',
+    human: 'Human',
+    alien: 'Alien',
+  }
   return (
     <div className="body-content">
       <div className="flex-row center">
@@ -22,49 +29,15 @@ export const DCPage = () => {
           Choose your favorite Marvel character
         </h1>
       </div>
-      <div className="flex-row categories">
-        <div className="category red-gradient">
-          <img
-            className="hero-category"
-            src="/src/images/icons/Villain.svg"
-            alt=""
-          />
-        </div>
-
-        <div className="category purple-gradient">
-          <img
-            className="hero-category"
-            src="/src/images/icons/Antihero.svg"
-            alt=""
-          />
-        </div>
-
-        <div className="category blue-gradient">
-          <img
-            className="hero-category"
-            src="/src/images/icons/Hero.svg"
-            alt=""
-          />
-        </div>
-        <div className="category pink-gradient">
-          <img
-            className="hero-category"
-            src="/src/images/icons/Human.svg"
-            alt=""
-          />
-        </div>
-        <div className="category green-gradient">
-          <img
-            className="hero-category"
-            src="/src/images/icons/Alien.svg"
-            alt=""
-          />
-        </div>
-      </div>
-      <HeroList
-        publisher="DC Comics"
-        heroList={getHeroesByPublisher('DC Comics')}
-      />
+      <HeroFilters />
+      {Object.keys(heroType).map((type) => (
+        <HeroList
+          key={type}
+          publisher="DC Comics"
+          heroList={getHeroesByPublisher('DC Comics', heroType[type])}
+          heroType={heroType[type]}
+        />
+      ))}
     </div>
   )
 }
